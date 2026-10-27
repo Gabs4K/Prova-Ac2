@@ -1,0 +1,37 @@
+
+
+h2 {
+  color: #333;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+}
+
+input,
+textarea {
+  padding: 8px;
+  border: 1px solid #362929;
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 80px;
+}
+
+button {
+  padding: 10px;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+a {
+  display: inline-block;
+  margin-top: 10px;
+}

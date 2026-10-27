@@ -1,0 +1,32 @@
+
+<h2>Cadastrar Emprestimo</h2>
+<form #formTarefa="ngForm" (ngSubmit)="cadastrar()" >
+
+  <label>Título do Livro:</label>
+  <input
+    type="text"
+    name="tituloLivro"
+    [(ngModel)]="tituloLivro"  
+    required>
+
+  <label>Nome da Pessoa:</label>
+  <textarea
+    name="nomePessoa"
+    [(ngModel)]="nomePessoa"
+    required
+  ></textarea>
+
+  <label>Prazo de devolução:</label>
+  <input
+    type="date"
+    name="dataPrevistaDevolucao"
+    [(ngModel)]="dataPrevistaDevolucao"
+    required
+  >
+
+  <button type="submit">Cadastrar Emprestimo do Livro</button>
+</form>
+
+<br>
+
+<a routerLink="/lista">Ver lista de emprestimo dos livros</a>

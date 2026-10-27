@@ -1,0 +1,35 @@
+ 
+<h2>Lista de Livros</h2>
+
+<p>Total de livro: {{ emprestimos.length }}</p>
+<p>Devolvidos: {{ emprestimos.filter(e => e.devolvido).length }}</p>
+<p>Pendentes: {{ emprestimos.filter(e => !e.devolvido).length }}</p>
+
+@if (emprestimos.length === 0) {
+  <p>Nenhum Livro emprestado.</p>
+} @else {
+  @for (emprestimo of emprestimos; track emprestimo.id) {
+    <div class="emprestimo" [class.devolvido]="emprestimo.devolvido">
+      <h3>{{ emprestimo.tituloLivro }}</h3>
+      <p>{{ emprestimo.nomePessoa }}</p>
+      <p>Prazo: {{ emprestimo.dataPrevistaDevolucao }}</p>
+      <p>Status: {{ emprestimo.devolvido ? 'Devolvido' : 'Em Aberto' }}</p>
+
+      @if (!emprestimo.devolvido) {
+        <button class="btn-concluir" type="button" (click)="concluir(emprestimo.id)">
+          Registrar Devolução
+        </button>
+      }
+
+      <button class="btn-remover" type="button" (click)="remover(emprestimo.id)">
+        Remover
+      </button>
+    </div>
+  }
+}
+
+<br>
+
+<a routerLink="/cadastrar">Voltar para cadastrar tarefa</a>
+
+

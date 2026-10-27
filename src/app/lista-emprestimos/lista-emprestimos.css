@@ -1,0 +1,32 @@
+
+.emprestimo {
+  background-color: #b4aeae;
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  color: yellow;
+}
+
+.emprestimo.devolvido {
+  color: green;
+  text-decoration: line-through;
+}
+
+button {
+  padding: 8px 12px;
+  margin-right: 8px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-concluir {
+  background-color: blue;
+  color: white;
+}
+
+.btn-remover {
+  background-color: red;
+  color: white;
+}
